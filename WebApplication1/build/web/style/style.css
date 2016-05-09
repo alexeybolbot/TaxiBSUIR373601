@@ -1,0 +1,146 @@
+body {
+background: #f3f2f3;
+color: black;
+font-family: Trebuchet MS, Arial, Times New Roman;
+font-size: 12px;
+}
+#menu {
+	
+background: white;
+width: 100px;
+height: 600px;
+z-index: 5;
+position: relative;
+margin-top: -10px;
+border-radius: 0 0 70px 0;
+left: -6px;
+
+}
+#regmenu {
+
+background: gray;
+width: 0%;
+height: 40px;
+}
+#logo {
+	border: 2px;
+	z-index:1;
+	
+}
+#footer {
+	
+	height:10px;
+	width: 100%;
+	background-color:yellow;
+	position: absolute;
+	top:91%;
+	
+}
+.button {
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+
+  box-shadow: 0 3px 20px rgba(0,0,0,.25),
+  inset 0 2px 0 rgba(255,255,255,.6),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+.button:hover {
+  box-shadow: inset 0 0 20px rgba(0,0,0,.2),
+  0 2px 0 rgba(255,255,255,.4),
+  inset 0 2px 0 rgba(0,0,0,.1);
+}
+
+
+.btn-PR {
+background-image: url(logo_house.jpg);
+background-size: 100% auto;
+}
+
+.btn-Appl {
+  background-image: url(Vacancies.png);
+background-size: 100% auto;
+}
+.btn-Cost {
+  background-image: url(ordericon.png);
+background-size: 100%;
+}
+.btn-Money {
+background-image: url(money.jpg);
+  background-size: 100%;
+}
+.btn-Like {
+  background-image: url(contact.png);
+  background-size: 100%;
+}
+.btn-Cont {
+  background-image: url(taxi_cooper.jpg);
+  background-size: 100%;
+}
+
+.btn-Park {
+  background-image: url(car.jpg);
+  background-size: 112%;
+}
+
+.btn-Vacant {
+  background-image: url(vacant.png);
+  background-size: 100%;
+}
+
+.btn-Logo {
+  background-image: url(logo.jpg);
+  background-size: 100%;
+  margin-left: 20px;
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+}
+
+
+.sqbutton{
+	
+cursor: pointer;
+float: right;
+ margin-top: 1px;
+ margin-right:20%; 
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 3px / 100%;
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+ box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+ 
+  
+}
+.sqbutton:hover {
+  transition: .5s linear;
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+.sqbutton:active {
+  top: 1px;
+}
+
+.tftable {;font-size:12px;color:#333333;width:70%;border-width: 1px;border-color: #ebab3a;border-collapse: collapse; overflow: scroll;}
+.tftable th {font-size:12px;background-color:#e6983b;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;text-align:left;}
+.tftable tr {background-color:#f0c169;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #ebab3a;}
+.tftable tr:hover {background-color:#ffffff;}
+

@@ -1,0 +1,20 @@
+﻿#PR,#Appl,#Cost,#Money,#Cont,#Vacant,#Park,#Like{
+	z-index: 4;
+    position: fixed; /* положение */
+    top: 0; /* отступ сверху */
+    left: -1000px; /* отступ слева */
+    background: white; /* цвет фона */
+    color: #000; /* цвет текста */
+    width: 250px; /* ширина блока */
+    height: 578px; /* высота блока */
+    padding: 10px; /* отступы от границ внутри блока */
+    text-align: left; /* выравнивание текста */
+    padding-left: 1%;
+    -webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+     border-radius: 0 0 70px 0;
+	opacity: 0.9;
+
+}

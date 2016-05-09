@@ -1,0 +1,274 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class newjsp_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("<head>\n");
+      out.write("\t<title> Taxi </title>\n");
+      out.write("\t<meta http-equiv =\"content-type\" content=\"text/html; charset = utf-8\" />\n");
+      out.write("\t<link rel= \"stylesheet\" type = \"text/css\" href = \"style/style.css\"  />\n");
+      out.write("\t<link rel= \"stylesheet\" type = \"text/css\" href = \"style/styleblockmenu.css\"  />\n");
+      out.write("\t<script src=\"js/jquery.js\"></script>\n");
+      out.write("\t<script src=\"https://api-maps.yandex.ru/2.1/?lang=ru_RU\" type=\"text/javascript\"></script>\n");
+      out.write("    <script src=\"js/DeliveryCalculatorClass.js\" type=\"text/javascript\"></script>\n");
+      out.write("\t<script src=\"js/blockmenu.js\" type=\"text/javascript\"></script>\n");
+      out.write("    <script src=\"js/deliveryCalculator.js\" type=\"text/javascript\"></script>\n");
+      out.write("\t<script src=\"js/getMessage.js\" type=\"text/javascript\"></script>\n");
+      out.write("\t\n");
+      out.write("\t<script>\n");
+      out.write("        window.onload = getAuth()\n");
+      out.write("        {\n");
+      out.write("            alert(\"ssss\");\n");
+      out.write("            createRequest(); \n");
+      out.write("            var url = \"http://localhost:8080/RESTful/webresources/rest.user/getSession\"; \n");
+      out.write("            alert(\"ssss\");\n");
+      out.write("            request.onreadystatechange = handleResponseAuthEnd;\n");
+      out.write("            request.open(\"GET\", url, true);\n");
+      out.write("            request.send(null);\n");
+      out.write("        };\n");
+      out.write("        var idSess;\n");
+      out.write("        var firstnameSess;\n");
+      out.write("        var lastnameSess;\n");
+      out.write("        var phoneSess;\n");
+      out.write("        var addressSess;\n");
+      out.write("        var typeSess;\n");
+      out.write("        var ordersSess;\n");
+      out.write("\t</script>\n");
+      out.write("\t\t \n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("\n");
+      out.write("<div id=\"PR\" style=\"background-color: #4876FF;\">\n");
+      out.write("\t<center>\n");
+      out.write("\t\t<b>Авторизация</b><br><br>\n");
+      out.write("\t\t<table>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tТелефон:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"phoneAuth\" id=\"phoneAuth\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tПароль:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"passwordAuth\" id=\"passwordAuth\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t</table><br>\n");
+      out.write("\t\t<button onclick=\"Auth()\"><img src=\"images/home.png\" width=\"20%\" alt=\"AuthEnterLogo\" \n");
+      out.write("\t\tstyle=\"vertical-align: middle\"> Войти\n");
+      out.write("\t\t</button>\n");
+      out.write("\t\t<br><br>\n");
+      out.write("\t\t\t<b>Регистрация</b><br><br>\n");
+      out.write("\t\t\t<table>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\tИмя:\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\" name=\"firstnameReg\" id=\"firstnameReg\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\tФамилия:\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\" name=\"lastnameReg\" id=\"lastnameReg\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\tАдрес:\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\" name=\"addressReg\" id=\"addressReg\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\tТелефон:\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\" name=\"phoneReg\" id=\"phoneReg\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t\t<tr>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\tПароль:\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t\t<input type=\"text\" name=\"passwordReg\" id=\"passwordReg\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t\t</td>\n");
+      out.write("\t\t\t\t</tr>\n");
+      out.write("\t\t\t</table><br>\n");
+      out.write("\t\t\t<button onclick=\"Registration()\"><img src=\"images/computer.png\" width=\"10%\" alt=\"RegEnterLogo\" \n");
+      out.write("\t\t\tstyle=\"vertical-align: middle\"> Регистрация\n");
+      out.write("\t\t\t</button>\n");
+      out.write("\t</center> \n");
+      out.write("</div>\n");
+      out.write("<div id=\"Appl\" style=\"background-color: #DEB887;\"> Appl </div>\n");
+      out.write("<div id=\"Cost\" style=\"background-color: #3CB371;\">\n");
+      out.write("<center>\n");
+      out.write("\t\t<b>Оформление заказа</b><br><br>\n");
+      out.write("\t\t<table>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tФИО:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"fioOrder\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tТелефон:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"phoneOrder\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tОткуда:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"otkydaOrder\" id=\"otkudaOrder\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tКуда:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"kudaOrder\" id=\"kudaOrder\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tСтоимость:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"priceOrder\" id=\"SUMMA\" size=\"8\" required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t</table><br>\n");
+      out.write("\t\t<button><img src=\"images/home.png\" width=\"20%\" alt=\"AuthEnterLogo\" \n");
+      out.write("\t\tstyle=\"vertical-align: middle\"> Войти\n");
+      out.write("\t\t</button>\n");
+      out.write("</center>\n");
+      out.write("</div>\n");
+      out.write("<div id=\"Money\" style=\"background-color: #FF7F00\">\n");
+      out.write("\t<center>\n");
+      out.write("\t\t<b>Рассчет стоимости</b><br><br>\n");
+      out.write("\t\t<table>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tРасстояние:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"phoneAuth\" id=\"KM\" size=\"8\" disabled required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t\t<tr>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\tСумма:\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t\t<td>\n");
+      out.write("\t\t\t\t\t<input type=\"text\" name=\"passwordAuth\" id=\"SUMMA\" size=\"8\" disabled required/>\n");
+      out.write("\t\t\t\t</td>\n");
+      out.write("\t\t\t</tr>\n");
+      out.write("\t\t</table><br>\n");
+      out.write(" </div>\n");
+      out.write("<div id=\"Like\"></div>\n");
+      out.write("<div id=\"Cont\"> Cont </div>\n");
+      out.write("<div id=\"Vacant\"> Vacant </div>\n");
+      out.write("<div id=\"Park\" style=\"background-color: #B5B5B5\"> Park </div>\n");
+      out.write("\n");
+      out.write("<div style=\"z-index: 3; width: 6%; height: 52%; position: absolute; left: 4px; top: 390px; background-color: white; opacity: 0.8\">\n");
+      out.write("\n");
+      out.write("</div>\n");
+      out.write("\n");
+      out.write("<div id=\"map\" style=\"width: 100%; height: 91%; position: absolute; right: 0; top: 0px; left: 0.40%; z-index:1;\"></div>\n");
+      out.write("\n");
+      out.write("</div>\n");
+      out.write("<div id=\"menu\" >\n");
+      out.write("<br>\n");
+      out.write("<div class=\"btn-Logo\"></div><br>\n");
+      out.write("<div class=\"button btn-PR\" id=\"btn-PR\" onclick=\"buttonPR()\"></div><br>\n");
+      out.write("<div class=\"button btn-Appl\" id=\"btn-Appl\" onclick=\"buttonAppl()\"></div><br>\n");
+      out.write("<div class=\"button btn-Cost\" id=\"btn-Cost\" onclick=\"buttonCost()\"></div><br>\n");
+      out.write("<div class=\"button btn-Money\" id=\"btn-Money\" onclick=\"buttonMoney()\"></div><br>\n");
+      out.write("<div class=\"button btn-Like\" id=\"btn-Like\" onclick=\"buttonLike()\"></div><br>\n");
+      out.write("<div class=\"button btn-Cont\" id=\"btn-Cont\" onclick=\"buttonCont()\"></div><br>\n");
+      out.write("<div class=\"button btn-Vacant\" id=\"btn-Vacant\" onclick=\"buttonVacant()\"></div><br>\n");
+      out.write("<div class=\"button btn-Park\" id=\"btn-Park\" onclick=\"buttonPark()\"></div><br>\n");
+      out.write("<br>\n");
+      out.write("</div>\n");
+      out.write("<div id= \"footer\">\n");
+      out.write("<div id= \"contacts\">\n");
+      out.write("</div>\n");
+      out.write("</div>\n");
+      out.write("<center>Copyright Алёшки (с)</center>\n");
+      out.write(" </body>\n");
+      out.write("</html>\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
